@@ -1,0 +1,260 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#nav {
+  list-style-type: none;
+  margin-top:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #feda6a;
+}
+h2
+{
+  color: #feda6a;
+}
+
+.li {
+  float: left;
+}
+
+.li a {
+  display: block;
+  color: #186F65;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  border: 3px solid #feda6a;
+  background-color: #186F65;
+  color: #feda6a;
+  font-weight: bold;
+}
+.form-style button{
+
+  width: 89%;
+	height:70%;
+	padding: 5%;
+	background: #feda6a;
+	border: 2px solid #104d45;
+	color: #186F65;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Times New Roman";
+}
+
+.form-style button:hover {
+  border: 3px solid #feda6a;
+  background-color: #186F65;
+  color: #feda6a;
+  font-weight: bold;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 15;
+  /* border-right: 2px #feda6a solid; */
+}
+.right {
+  right: 0;
+  border-left: 2px #feda6a solid;
+}
+
+.mytext {
+    border:3px solid #104d45;
+    border-right:none;
+    padding:4px;
+    margin:0px;
+    float:left;
+    height:32px;
+    overflow:hidden;
+    line-height:16px;
+    width: 300px;
+    margin-left: 16px;
+  }
+
+  .mic {
+      border:3px solid #104d45;
+      background:#feda6a;
+      vertical-align:center;
+      padding:0px;
+      margin:0;
+      float:left;
+      height:44px;
+      overflow:hidden;
+      /* width:5em; */
+      text-align:center;
+      line-height:16px;
+  }
+  
+
+.submit {
+    border:3px solid #104d45;
+    height: 44px;
+    width: 160px;
+    text-align: center;
+    background-color: #feda6a;
+    color: #186F65;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Times New Roman";
+    margin-left: 5px;
+    /* vertical-align:top; */
+}
+.submit:hover {
+  border: 3px #feda6a solid;
+  background-color: #186F65;
+  color: #feda6a;
+  font-weight: bold;
+}
+.td {
+  color: #feda6a;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body
+{
+  /* background: linear-gradient(rgba(24,105,95,1) 0%, rgba(24,111,101,1) 22%, rgb(28, 131, 119) 78%,rgb(38, 179, 162) 100%); */
+  background-color: #186F65;
+}
+
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+
+}
+.form-style h1, .form-style a{
+	padding: 20px 0;
+  font-size: 24px;
+	font-weight: bold;
+  font-family: "Times New Roman";
+	text-align: center;
+	margin: -16px -16px 16px -16px;
+  color:#186F65
+}
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color:#186F65 ;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="password"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+	box-shadow: 0 0 5px #0000a0;
+	padding: 3%;
+	border: 1px solid #0000a0;
+}
+
+.site-form span,label{
+  color: #feda6a;
+}
+.errorlist{
+    color: red;
+    font-weight: bold;
+}
+.team-members {
+    display: flex;
+    justify-content: space-around; /* Adjusts spacing between members */
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+}
+
+.member {
+    text-align: center; /* Centers text below the circle */
+    margin: 20px; 
+    font-size: 24px;
+    font-weight: bolder;
+    color: #feda6a;
+}
+
+.circle {
+    width: 170px;
+    height: 170px; 
+    border: 4px solid #104d45;
+    /* background-color: #f02828;  */
+    object-fit: cover;
+    border-radius: 50%; 
+    margin: 0 auto 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    /* font-size: 24px; */
+}
+
+</style>
+<title>SIGNLINGO</title>
+</head>
+<div style="background-color:#186F65;color:#feda6a;padding:10 10 1 10;border: 4px #feda6a groove;margin-bottom:0;">
+
+<h1 align=center>SIGNLINGO</h1>
+</div>
+<br>
+<body>
+<ul id="nav">
+  <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
+  <li class="li"><a href="{% url 'text2sign' %}">Sign Language Generator</a></li>
+  <li class="li"><a href="{% url 'sign2text' %}">Sign Language Translator</a></li>
+  <li class="li"><a href="{% url 'knowUs' %}">Know Us</a></li>
+</ul>
+
+<div class="wrapper" >
+  {% block content %}
+  {% endblock %}
+</div>
+
+
+</body>
+</html> 
